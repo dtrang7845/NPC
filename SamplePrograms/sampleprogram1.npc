@@ -1,0 +1,10 @@
+npc "Math Nerd" {
+    traits = [smart, nerdy]
+    dialogue = {
+        on "hello": "Hi, is there a problem I can help you solve?" ->fixesGlasses 
+        on "bye": "Bye my fellow friend!" ->wavesBye
+        fallback: ai("respond to what it says")
+    }
+}
+
+

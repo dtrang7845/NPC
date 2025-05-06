@@ -1,0 +1,21 @@
+npc "Math Nerd" {
+    traits = [smart, nerdy]
+    dialogue = {
+        on "hello": "Hi, is there a problem I can help you solve?" ->fixesGlasses
+        on "bye": "Bye my fellow friend!" ->waves
+        with "Math Nerd2" on "Math Nerd-Math Nerd2": "I am smarter than you sir!" ->smiles
+        fallback: ai("respond to what it says")
+    }
+}
+
+
+npc "Math Nerd2" {
+    traits = [smart, nerdy]
+    dialogue = {
+        on "hello": "Hi, is there a problem I can help you solve?" ->fixesGlasses 
+        with "Math Nerd" on "Math Nerd2-Math Nerd": "I am smarter than you!" ->smiles
+        fallback: ai("respond to what it says")
+    }
+}
+
+

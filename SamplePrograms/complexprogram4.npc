@@ -1,0 +1,37 @@
+npc "CS420 Student" {
+    traits = [depressed, loser]
+    dialogue = {
+        on "hello": "I dont want to talk, I am about to fail this final" ->handOnFace
+        on "bye": "Thank goodness, I can't bare" ->rollsEyes
+        with "Professor Dabish" on "CS420 Student-Dabish": "Can you make the final exam easy, it is approaching soon" ->handsPraying
+        fallback: ai("Respond naturally")
+    }
+    memory = "Ugh, get me out this class"
+}
+npc "CS420 Student2" {
+    traits = [nerd, happy]
+    dialogue = {
+        on "hello": "I am so excited for this school year to be over" ->fixGlasses
+        on "bye": "Alright! I'll catch you later fella!" ->grins
+        with "CS420 Student" on "Student-Student2": "How are you preparing for the final" ->smile
+        fallback: ai("Respond naturally")
+    }
+}
+
+npc "Professor Dabish" {
+    traits = [witty, funny, intelligent]
+    dialogue = {
+        on "I have an answer": "That's an A for the day" ->slamsTable
+        on "bye": "You may not leave early, but are allowed to work outside the class" ->slamsTable
+        with "CS420 Student" on "Dabish-CS420 Student": "You are a dumb student you know that? My exams are easy!" ->laughsAggressively
+        fallback: ai("Respond naturally")
+    }
+    memory = "I hate the students beyond the 2nd row, I need to remember to give them D's before the semesters ends. (this is a joke)"
+}
+
+
+
+
+
+
+

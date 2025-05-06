@@ -1,0 +1,27 @@
+npc "Bartender" {
+    traits = [grumpy, tired]
+    dialogue = {
+        on "hello": "What do you want?" ->serveDrink
+        fallback: ai("respond naturally to what the player said")
+    }
+
+}
+
+npc "Guard" {
+    traits = [professional, stern]
+    dialogue = {
+        on "hello": "How may I serve you today?" ->pullsSword
+        fallback: ai("respond naturally to what the player said")
+    }
+    memory = "I recognize you"
+}
+
+npc "Math Nerd" {
+    traits =[smart, nerdy]
+    dialogue = {
+        on "hello": "Hi, is there a problem I can help you solve?" -> fixesGlasses
+        fallback: ai("respond to what it says")
+    }
+}
+
+

@@ -1,0 +1,7 @@
+npc "Math Nerd" {
+    dialogue = {
+        on "hello": "Hi, is there a problem I can help you solve?" ->fixesGlasses 
+    }
+}
+
+
